@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+   Правила резервного копирования для Android 12+.
+   Требование F-12: данные не передаются на внешние серверы, поэтому облачная копия
+   полностью отключена. Перенос на новый телефон по кабелю/напрямую (device-transfer)
+   остаётся разрешён: он идёт без интернета.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="root" path="." />
+        <exclude domain="file" path="." />
+        <exclude domain="database" path="." />
+        <exclude domain="sharedpref" path="." />
+        <exclude domain="external" path="." />
+    </cloud-backup>
+</data-extraction-rules>
